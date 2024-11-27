@@ -1,5 +1,7 @@
 "use strict";
 
+const iframe = document.getElementById("frame");
+
 registerSW()
   .then(() => {
     
