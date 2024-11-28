@@ -7,4 +7,11 @@ self.__uv$config = {
     bundle: '/static/uv/uv.bundle.js',
     config: '/static/uv/uv.config.js',
     sw: '/static/uv/uv.sw.js',
+    inject: [
+    {
+      host: /now.gg*/,
+      injectTo: "head",
+      html: `<script>document.querySelectorAll("div.sc-19c21da7-0.dgAMyI").forEach(function(c){c.remove()});</script>`
+    }
+  ]
 };
